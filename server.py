@@ -271,13 +271,25 @@ def predict(req: PredictRequest):
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"ML inference error: {str(exc)}")
 
-    top_crop = result["recommended_crop"]
-    eco = calculate_farm_economics(crop_name=top_crop, farm_size_acres=req.farm_acres, user_budget_inr=req.user_budget, selected_state=req.state, farming_method=req.farming_method)
-
+    chosen_crop = None
+    chosen_eco = None
     enriched = []
+    
+    # First, calculate economics for all candidates and find the first one that fits the budget
     for c in result["top_candidates"]:
         ce = calculate_farm_economics(crop_name=c["crop"], farm_size_acres=req.farm_acres, user_budget_inr=req.user_budget, selected_state=req.state, farming_method=req.farming_method)
         enriched.append({**c, "economics": ce})
+        if not chosen_crop and ce["is_sufficient"]:
+            chosen_crop = c["crop"]
+            chosen_eco = ce
+            
+    # Fallback to the top prediction if none fit the budget
+    if not chosen_crop:
+        chosen_crop = result["recommended_crop"]
+        chosen_eco = calculate_farm_economics(crop_name=chosen_crop, farm_size_acres=req.farm_acres, user_budget_inr=req.user_budget, selected_state=req.state, farming_method=req.farming_method)
+
+    top_crop = chosen_crop
+    eco = chosen_eco
 
     crop_key = top_crop.lower()
     profile = CROP_DATASET_PROFILES.get(crop_key, {})
