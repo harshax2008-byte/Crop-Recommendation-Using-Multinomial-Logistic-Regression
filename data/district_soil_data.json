@@ -1,0 +1,1397 @@
+{
+  "Andhra Pradesh": {
+    "Guntur": {
+      "n": 85,
+      "p": 38,
+      "k": 42,
+      "ph": 7.2,
+      "temperature": 30.5,
+      "humidity": 72,
+      "rainfall": 95
+    },
+    "Krishna": {
+      "n": 90,
+      "p": 42,
+      "k": 45,
+      "ph": 6.8,
+      "temperature": 29.8,
+      "humidity": 78,
+      "rainfall": 110
+    },
+    "Kurnool": {
+      "n": 62,
+      "p": 34,
+      "k": 38,
+      "ph": 7.5,
+      "temperature": 31.2,
+      "humidity": 58,
+      "rainfall": 68
+    },
+    "East Godavari": {
+      "n": 95,
+      "p": 45,
+      "k": 48,
+      "ph": 6.5,
+      "temperature": 28.5,
+      "humidity": 82,
+      "rainfall": 180
+    },
+    "West Godavari": {
+      "n": 92,
+      "p": 44,
+      "k": 46,
+      "ph": 6.6,
+      "temperature": 29.0,
+      "humidity": 80,
+      "rainfall": 165
+    },
+    "Anantapur": {
+      "n": 55,
+      "p": 30,
+      "k": 35,
+      "ph": 7.8,
+      "temperature": 32.0,
+      "humidity": 55,
+      "rainfall": 52
+    },
+    "Chittoor": {
+      "n": 68,
+      "p": 36,
+      "k": 40,
+      "ph": 6.9,
+      "temperature": 29.5,
+      "humidity": 68,
+      "rainfall": 88
+    },
+    "Visakhapatnam": {
+      "n": 82,
+      "p": 40,
+      "k": 44,
+      "ph": 6.4,
+      "temperature": 28.0,
+      "humidity": 78,
+      "rainfall": 155
+    },
+    "Nellore": {
+      "n": 78,
+      "p": 37,
+      "k": 41,
+      "ph": 7.0,
+      "temperature": 30.8,
+      "humidity": 74,
+      "rainfall": 105
+    },
+    "Prakasam": {
+      "n": 60,
+      "p": 32,
+      "k": 37,
+      "ph": 7.4,
+      "temperature": 31.5,
+      "humidity": 62,
+      "rainfall": 72
+    }
+  },
+  "Assam": {
+    "Kamrup": {
+      "n": 88,
+      "p": 35,
+      "k": 40,
+      "ph": 5.5,
+      "temperature": 25.8,
+      "humidity": 82,
+      "rainfall": 195
+    },
+    "Nagaon": {
+      "n": 92,
+      "p": 38,
+      "k": 42,
+      "ph": 5.3,
+      "temperature": 25.2,
+      "humidity": 84,
+      "rainfall": 210
+    },
+    "Sonitpur": {
+      "n": 85,
+      "p": 32,
+      "k": 38,
+      "ph": 5.6,
+      "temperature": 24.8,
+      "humidity": 80,
+      "rainfall": 188
+    },
+    "Jorhat": {
+      "n": 95,
+      "p": 40,
+      "k": 45,
+      "ph": 5.2,
+      "temperature": 24.5,
+      "humidity": 86,
+      "rainfall": 220
+    },
+    "Dibrugarh": {
+      "n": 100,
+      "p": 42,
+      "k": 48,
+      "ph": 5.0,
+      "temperature": 24.0,
+      "humidity": 88,
+      "rainfall": 240
+    },
+    "Cachar": {
+      "n": 90,
+      "p": 36,
+      "k": 41,
+      "ph": 5.4,
+      "temperature": 26.0,
+      "humidity": 85,
+      "rainfall": 225
+    },
+    "Barpeta": {
+      "n": 82,
+      "p": 30,
+      "k": 36,
+      "ph": 5.7,
+      "temperature": 26.2,
+      "humidity": 83,
+      "rainfall": 200
+    },
+    "Tinsukia": {
+      "n": 98,
+      "p": 41,
+      "k": 47,
+      "ph": 5.1,
+      "temperature": 24.2,
+      "humidity": 87,
+      "rainfall": 235
+    }
+  },
+  "Bihar": {
+    "Patna": {
+      "n": 78,
+      "p": 52,
+      "k": 35,
+      "ph": 7.2,
+      "temperature": 27.5,
+      "humidity": 68,
+      "rainfall": 105
+    },
+    "Nalanda": {
+      "n": 82,
+      "p": 55,
+      "k": 38,
+      "ph": 7.0,
+      "temperature": 27.0,
+      "humidity": 65,
+      "rainfall": 98
+    },
+    "Gaya": {
+      "n": 65,
+      "p": 48,
+      "k": 32,
+      "ph": 7.4,
+      "temperature": 28.0,
+      "humidity": 60,
+      "rainfall": 85
+    },
+    "Muzaffarpur": {
+      "n": 90,
+      "p": 58,
+      "k": 40,
+      "ph": 6.8,
+      "temperature": 26.5,
+      "humidity": 72,
+      "rainfall": 115
+    },
+    "Bhagalpur": {
+      "n": 75,
+      "p": 50,
+      "k": 34,
+      "ph": 7.1,
+      "temperature": 27.8,
+      "humidity": 66,
+      "rainfall": 95
+    },
+    "Darbhanga": {
+      "n": 88,
+      "p": 56,
+      "k": 38,
+      "ph": 6.9,
+      "temperature": 26.0,
+      "humidity": 74,
+      "rainfall": 120
+    },
+    "Rohtas": {
+      "n": 70,
+      "p": 46,
+      "k": 30,
+      "ph": 7.3,
+      "temperature": 28.2,
+      "humidity": 62,
+      "rainfall": 90
+    },
+    "Samastipur": {
+      "n": 85,
+      "p": 54,
+      "k": 36,
+      "ph": 6.8,
+      "temperature": 26.8,
+      "humidity": 70,
+      "rainfall": 108
+    }
+  },
+  "Gujarat": {
+    "Ahmedabad": {
+      "n": 95,
+      "p": 42,
+      "k": 22,
+      "ph": 7.5,
+      "temperature": 30.0,
+      "humidity": 62,
+      "rainfall": 72
+    },
+    "Rajkot": {
+      "n": 110,
+      "p": 48,
+      "k": 20,
+      "ph": 7.8,
+      "temperature": 28.5,
+      "humidity": 68,
+      "rainfall": 65
+    },
+    "Surat": {
+      "n": 105,
+      "p": 45,
+      "k": 25,
+      "ph": 7.2,
+      "temperature": 29.5,
+      "humidity": 75,
+      "rainfall": 110
+    },
+    "Vadodara": {
+      "n": 100,
+      "p": 44,
+      "k": 24,
+      "ph": 7.4,
+      "temperature": 29.0,
+      "humidity": 65,
+      "rainfall": 85
+    },
+    "Junagadh": {
+      "n": 108,
+      "p": 46,
+      "k": 18,
+      "ph": 7.6,
+      "temperature": 28.0,
+      "humidity": 72,
+      "rainfall": 78
+    },
+    "Kutch": {
+      "n": 80,
+      "p": 38,
+      "k": 15,
+      "ph": 8.2,
+      "temperature": 32.0,
+      "humidity": 48,
+      "rainfall": 35
+    },
+    "Bhavnagar": {
+      "n": 98,
+      "p": 43,
+      "k": 19,
+      "ph": 7.7,
+      "temperature": 29.2,
+      "humidity": 65,
+      "rainfall": 58
+    },
+    "Mehsana": {
+      "n": 92,
+      "p": 40,
+      "k": 21,
+      "ph": 7.6,
+      "temperature": 29.8,
+      "humidity": 58,
+      "rainfall": 62
+    },
+    "Amreli": {
+      "n": 102,
+      "p": 44,
+      "k": 17,
+      "ph": 7.9,
+      "temperature": 28.8,
+      "humidity": 62,
+      "rainfall": 55
+    }
+  },
+  "Haryana": {
+    "Karnal": {
+      "n": 92,
+      "p": 55,
+      "k": 30,
+      "ph": 7.5,
+      "temperature": 24.5,
+      "humidity": 65,
+      "rainfall": 75
+    },
+    "Hisar": {
+      "n": 80,
+      "p": 50,
+      "k": 25,
+      "ph": 7.8,
+      "temperature": 27.0,
+      "humidity": 52,
+      "rainfall": 45
+    },
+    "Ambala": {
+      "n": 98,
+      "p": 58,
+      "k": 35,
+      "ph": 7.2,
+      "temperature": 23.5,
+      "humidity": 68,
+      "rainfall": 82
+    },
+    "Sirsa": {
+      "n": 75,
+      "p": 48,
+      "k": 22,
+      "ph": 8.0,
+      "temperature": 28.0,
+      "humidity": 48,
+      "rainfall": 38
+    },
+    "Kurukshetra": {
+      "n": 95,
+      "p": 56,
+      "k": 32,
+      "ph": 7.4,
+      "temperature": 24.0,
+      "humidity": 62,
+      "rainfall": 70
+    },
+    "Rohtak": {
+      "n": 85,
+      "p": 52,
+      "k": 28,
+      "ph": 7.6,
+      "temperature": 26.0,
+      "humidity": 55,
+      "rainfall": 52
+    },
+    "Sonipat": {
+      "n": 88,
+      "p": 53,
+      "k": 29,
+      "ph": 7.5,
+      "temperature": 25.5,
+      "humidity": 58,
+      "rainfall": 58
+    },
+    "Fatehabad": {
+      "n": 78,
+      "p": 49,
+      "k": 24,
+      "ph": 7.9,
+      "temperature": 27.5,
+      "humidity": 50,
+      "rainfall": 42
+    }
+  },
+  "Himachal Pradesh": {
+    "Shimla": {
+      "n": 20,
+      "p": 132,
+      "k": 198,
+      "ph": 5.8,
+      "temperature": 18.5,
+      "humidity": 88,
+      "rainfall": 115
+    },
+    "Kullu": {
+      "n": 25,
+      "p": 125,
+      "k": 190,
+      "ph": 5.6,
+      "temperature": 20.0,
+      "humidity": 82,
+      "rainfall": 125
+    },
+    "Kangra": {
+      "n": 30,
+      "p": 118,
+      "k": 180,
+      "ph": 6.0,
+      "temperature": 22.0,
+      "humidity": 78,
+      "rainfall": 105
+    },
+    "Mandi": {
+      "n": 28,
+      "p": 120,
+      "k": 185,
+      "ph": 5.9,
+      "temperature": 21.0,
+      "humidity": 80,
+      "rainfall": 110
+    },
+    "Solan": {
+      "n": 22,
+      "p": 128,
+      "k": 192,
+      "ph": 5.7,
+      "temperature": 19.5,
+      "humidity": 85,
+      "rainfall": 120
+    },
+    "Chamba": {
+      "n": 18,
+      "p": 135,
+      "k": 200,
+      "ph": 5.5,
+      "temperature": 17.5,
+      "humidity": 90,
+      "rainfall": 130
+    },
+    "Sirmaur": {
+      "n": 26,
+      "p": 122,
+      "k": 188,
+      "ph": 6.1,
+      "temperature": 22.5,
+      "humidity": 76,
+      "rainfall": 100
+    },
+    "Una": {
+      "n": 32,
+      "p": 115,
+      "k": 175,
+      "ph": 6.3,
+      "temperature": 23.5,
+      "humidity": 72,
+      "rainfall": 92
+    }
+  },
+  "Karnataka": {
+    "Bengaluru Rural": {
+      "n": 85,
+      "p": 35,
+      "k": 32,
+      "ph": 6.5,
+      "temperature": 24.5,
+      "humidity": 62,
+      "rainfall": 95
+    },
+    "Mysuru": {
+      "n": 90,
+      "p": 38,
+      "k": 35,
+      "ph": 6.3,
+      "temperature": 25.0,
+      "humidity": 65,
+      "rainfall": 105
+    },
+    "Belagavi": {
+      "n": 78,
+      "p": 42,
+      "k": 38,
+      "ph": 7.0,
+      "temperature": 26.5,
+      "humidity": 68,
+      "rainfall": 115
+    },
+    "Dharwad": {
+      "n": 75,
+      "p": 40,
+      "k": 36,
+      "ph": 7.2,
+      "temperature": 26.0,
+      "humidity": 60,
+      "rainfall": 85
+    },
+    "Hassan": {
+      "n": 98,
+      "p": 30,
+      "k": 34,
+      "ph": 6.2,
+      "temperature": 24.0,
+      "humidity": 72,
+      "rainfall": 155
+    },
+    "Shivamogga": {
+      "n": 105,
+      "p": 32,
+      "k": 38,
+      "ph": 5.8,
+      "temperature": 25.5,
+      "humidity": 78,
+      "rainfall": 175
+    },
+    "Ballari": {
+      "n": 65,
+      "p": 45,
+      "k": 28,
+      "ph": 7.5,
+      "temperature": 29.0,
+      "humidity": 52,
+      "rainfall": 55
+    },
+    "Tumakuru": {
+      "n": 72,
+      "p": 36,
+      "k": 30,
+      "ph": 6.8,
+      "temperature": 26.5,
+      "humidity": 58,
+      "rainfall": 72
+    },
+    "Mandya": {
+      "n": 88,
+      "p": 34,
+      "k": 33,
+      "ph": 6.4,
+      "temperature": 25.2,
+      "humidity": 65,
+      "rainfall": 98
+    }
+  },
+  "Kerala": {
+    "Wayanad": {
+      "n": 110,
+      "p": 45,
+      "k": 50,
+      "ph": 5.5,
+      "temperature": 24.0,
+      "humidity": 88,
+      "rainfall": 265
+    },
+    "Idukki": {
+      "n": 105,
+      "p": 42,
+      "k": 48,
+      "ph": 5.3,
+      "temperature": 22.5,
+      "humidity": 90,
+      "rainfall": 280
+    },
+    "Palakkad": {
+      "n": 95,
+      "p": 38,
+      "k": 42,
+      "ph": 5.8,
+      "temperature": 27.0,
+      "humidity": 82,
+      "rainfall": 210
+    },
+    "Alappuzha": {
+      "n": 100,
+      "p": 40,
+      "k": 45,
+      "ph": 5.6,
+      "temperature": 27.5,
+      "humidity": 85,
+      "rainfall": 240
+    },
+    "Kottayam": {
+      "n": 102,
+      "p": 41,
+      "k": 46,
+      "ph": 5.5,
+      "temperature": 26.5,
+      "humidity": 86,
+      "rainfall": 250
+    },
+    "Thrissur": {
+      "n": 98,
+      "p": 39,
+      "k": 44,
+      "ph": 5.7,
+      "temperature": 27.2,
+      "humidity": 84,
+      "rainfall": 230
+    },
+    "Kozhikode": {
+      "n": 108,
+      "p": 44,
+      "k": 49,
+      "ph": 5.4,
+      "temperature": 26.0,
+      "humidity": 87,
+      "rainfall": 260
+    },
+    "Malappuram": {
+      "n": 104,
+      "p": 43,
+      "k": 47,
+      "ph": 5.6,
+      "temperature": 26.8,
+      "humidity": 85,
+      "rainfall": 245
+    }
+  },
+  "Madhya Pradesh": {
+    "Indore": {
+      "n": 48,
+      "p": 62,
+      "k": 72,
+      "ph": 7.2,
+      "temperature": 26.5,
+      "humidity": 52,
+      "rainfall": 88
+    },
+    "Bhopal": {
+      "n": 52,
+      "p": 65,
+      "k": 75,
+      "ph": 7.0,
+      "temperature": 25.8,
+      "humidity": 55,
+      "rainfall": 95
+    },
+    "Ujjain": {
+      "n": 42,
+      "p": 60,
+      "k": 68,
+      "ph": 7.5,
+      "temperature": 27.0,
+      "humidity": 48,
+      "rainfall": 78
+    },
+    "Jabalpur": {
+      "n": 58,
+      "p": 68,
+      "k": 80,
+      "ph": 6.8,
+      "temperature": 26.0,
+      "humidity": 62,
+      "rainfall": 110
+    },
+    "Narmadapuram": {
+      "n": 55,
+      "p": 66,
+      "k": 78,
+      "ph": 7.0,
+      "temperature": 26.5,
+      "humidity": 58,
+      "rainfall": 100
+    },
+    "Sehore": {
+      "n": 45,
+      "p": 63,
+      "k": 74,
+      "ph": 7.3,
+      "temperature": 26.2,
+      "humidity": 50,
+      "rainfall": 82
+    },
+    "Dewas": {
+      "n": 50,
+      "p": 64,
+      "k": 76,
+      "ph": 7.2,
+      "temperature": 27.0,
+      "humidity": 52,
+      "rainfall": 85
+    },
+    "Dhar": {
+      "n": 46,
+      "p": 61,
+      "k": 70,
+      "ph": 7.4,
+      "temperature": 27.5,
+      "humidity": 50,
+      "rainfall": 80
+    },
+    "Gwalior": {
+      "n": 38,
+      "p": 58,
+      "k": 65,
+      "ph": 7.8,
+      "temperature": 28.0,
+      "humidity": 45,
+      "rainfall": 68
+    }
+  },
+  "Maharashtra": {
+    "Nashik": {
+      "n": 72,
+      "p": 48,
+      "k": 42,
+      "ph": 6.8,
+      "temperature": 26.0,
+      "humidity": 62,
+      "rainfall": 95
+    },
+    "Pune": {
+      "n": 68,
+      "p": 45,
+      "k": 40,
+      "ph": 6.5,
+      "temperature": 25.5,
+      "humidity": 58,
+      "rainfall": 85
+    },
+    "Nagpur": {
+      "n": 80,
+      "p": 52,
+      "k": 48,
+      "ph": 7.2,
+      "temperature": 28.5,
+      "humidity": 55,
+      "rainfall": 105
+    },
+    "Ahmednagar": {
+      "n": 60,
+      "p": 42,
+      "k": 36,
+      "ph": 7.5,
+      "temperature": 27.0,
+      "humidity": 52,
+      "rainfall": 62
+    },
+    "Jalgaon": {
+      "n": 75,
+      "p": 50,
+      "k": 44,
+      "ph": 7.0,
+      "temperature": 29.0,
+      "humidity": 55,
+      "rainfall": 72
+    },
+    "Kolhapur": {
+      "n": 82,
+      "p": 55,
+      "k": 50,
+      "ph": 6.4,
+      "temperature": 25.0,
+      "humidity": 72,
+      "rainfall": 155
+    },
+    "Solapur": {
+      "n": 55,
+      "p": 40,
+      "k": 32,
+      "ph": 7.8,
+      "temperature": 29.5,
+      "humidity": 48,
+      "rainfall": 52
+    },
+    "Satara": {
+      "n": 78,
+      "p": 52,
+      "k": 46,
+      "ph": 6.6,
+      "temperature": 24.5,
+      "humidity": 68,
+      "rainfall": 130
+    },
+    "Aurangabad": {
+      "n": 58,
+      "p": 44,
+      "k": 38,
+      "ph": 7.4,
+      "temperature": 28.0,
+      "humidity": 52,
+      "rainfall": 68
+    },
+    "Amravati": {
+      "n": 76,
+      "p": 50,
+      "k": 45,
+      "ph": 7.1,
+      "temperature": 28.0,
+      "humidity": 58,
+      "rainfall": 92
+    }
+  },
+  "Odisha": {
+    "Cuttack": {
+      "n": 88,
+      "p": 42,
+      "k": 38,
+      "ph": 6.2,
+      "temperature": 28.0,
+      "humidity": 78,
+      "rainfall": 165
+    },
+    "Balasore": {
+      "n": 92,
+      "p": 45,
+      "k": 42,
+      "ph": 5.8,
+      "temperature": 27.5,
+      "humidity": 82,
+      "rainfall": 185
+    },
+    "Sambalpur": {
+      "n": 80,
+      "p": 38,
+      "k": 35,
+      "ph": 6.5,
+      "temperature": 28.5,
+      "humidity": 72,
+      "rainfall": 145
+    },
+    "Puri": {
+      "n": 85,
+      "p": 40,
+      "k": 40,
+      "ph": 6.0,
+      "temperature": 27.8,
+      "humidity": 85,
+      "rainfall": 195
+    },
+    "Ganjam": {
+      "n": 82,
+      "p": 38,
+      "k": 36,
+      "ph": 6.3,
+      "temperature": 28.2,
+      "humidity": 76,
+      "rainfall": 155
+    },
+    "Bhadrak": {
+      "n": 90,
+      "p": 44,
+      "k": 41,
+      "ph": 5.9,
+      "temperature": 27.2,
+      "humidity": 84,
+      "rainfall": 190
+    },
+    "Bargarh": {
+      "n": 78,
+      "p": 36,
+      "k": 33,
+      "ph": 6.6,
+      "temperature": 29.0,
+      "humidity": 68,
+      "rainfall": 135
+    },
+    "Khurda": {
+      "n": 86,
+      "p": 41,
+      "k": 39,
+      "ph": 6.1,
+      "temperature": 27.5,
+      "humidity": 80,
+      "rainfall": 175
+    }
+  },
+  "Punjab": {
+    "Ludhiana": {
+      "n": 90.0,
+      "p": 45.0,
+      "k": 42.0,
+      "ph": 7.1,
+      "temperature": 25.0,
+      "humidity": 68.0,
+      "rainfall": 85.0
+    },
+    "Amritsar": {
+      "n": 95,
+      "p": 55,
+      "k": 30,
+      "ph": 7.6,
+      "temperature": 23.8,
+      "humidity": 62,
+      "rainfall": 65
+    },
+    "Jalandhar": {
+      "n": 100,
+      "p": 60,
+      "k": 34,
+      "ph": 7.4,
+      "temperature": 24.0,
+      "humidity": 64,
+      "rainfall": 70
+    },
+    "Patiala": {
+      "n": 96,
+      "p": 57,
+      "k": 31,
+      "ph": 7.5,
+      "temperature": 24.8,
+      "humidity": 60,
+      "rainfall": 68
+    },
+    "Bathinda": {
+      "n": 85,
+      "p": 50,
+      "k": 25,
+      "ph": 7.9,
+      "temperature": 26.5,
+      "humidity": 52,
+      "rainfall": 45
+    },
+    "Firozpur": {
+      "n": 88,
+      "p": 52,
+      "k": 28,
+      "ph": 7.8,
+      "temperature": 25.5,
+      "humidity": 55,
+      "rainfall": 50
+    },
+    "Sangrur": {
+      "n": 92,
+      "p": 54,
+      "k": 30,
+      "ph": 7.6,
+      "temperature": 25.0,
+      "humidity": 58,
+      "rainfall": 55
+    },
+    "Hoshiarpur": {
+      "n": 105,
+      "p": 62,
+      "k": 38,
+      "ph": 7.2,
+      "temperature": 22.5,
+      "humidity": 70,
+      "rainfall": 85
+    }
+  },
+  "Rajasthan": {
+    "Jaipur": {
+      "n": 55,
+      "p": 52,
+      "k": 38,
+      "ph": 7.8,
+      "temperature": 28.0,
+      "humidity": 42,
+      "rainfall": 52
+    },
+    "Jodhpur": {
+      "n": 35,
+      "p": 42,
+      "k": 28,
+      "ph": 8.2,
+      "temperature": 30.5,
+      "humidity": 32,
+      "rainfall": 28
+    },
+    "Kota": {
+      "n": 65,
+      "p": 58,
+      "k": 45,
+      "ph": 7.5,
+      "temperature": 27.5,
+      "humidity": 48,
+      "rainfall": 65
+    },
+    "Sri Ganganagar": {
+      "n": 72,
+      "p": 62,
+      "k": 50,
+      "ph": 7.6,
+      "temperature": 26.0,
+      "humidity": 50,
+      "rainfall": 55
+    },
+    "Bikaner": {
+      "n": 30,
+      "p": 38,
+      "k": 25,
+      "ph": 8.5,
+      "temperature": 31.0,
+      "humidity": 28,
+      "rainfall": 22
+    },
+    "Udaipur": {
+      "n": 58,
+      "p": 55,
+      "k": 42,
+      "ph": 7.4,
+      "temperature": 26.5,
+      "humidity": 52,
+      "rainfall": 62
+    },
+    "Alwar": {
+      "n": 62,
+      "p": 56,
+      "k": 40,
+      "ph": 7.6,
+      "temperature": 27.0,
+      "humidity": 45,
+      "rainfall": 55
+    },
+    "Nagaur": {
+      "n": 40,
+      "p": 44,
+      "k": 30,
+      "ph": 8.0,
+      "temperature": 29.5,
+      "humidity": 35,
+      "rainfall": 32
+    },
+    "Barmer": {
+      "n": 28,
+      "p": 36,
+      "k": 22,
+      "ph": 8.5,
+      "temperature": 32.0,
+      "humidity": 25,
+      "rainfall": 18
+    }
+  },
+  "Tamil Nadu": {
+    "Thanjavur": {
+      "n": 88,
+      "p": 48,
+      "k": 42,
+      "ph": 7.0,
+      "temperature": 30.0,
+      "humidity": 78,
+      "rainfall": 120
+    },
+    "Coimbatore": {
+      "n": 75,
+      "p": 40,
+      "k": 38,
+      "ph": 6.8,
+      "temperature": 27.5,
+      "humidity": 65,
+      "rainfall": 85
+    },
+    "Madurai": {
+      "n": 70,
+      "p": 38,
+      "k": 35,
+      "ph": 7.2,
+      "temperature": 30.5,
+      "humidity": 62,
+      "rainfall": 82
+    },
+    "Salem": {
+      "n": 65,
+      "p": 36,
+      "k": 32,
+      "ph": 6.5,
+      "temperature": 28.5,
+      "humidity": 58,
+      "rainfall": 78
+    },
+    "Tiruchirappalli": {
+      "n": 80,
+      "p": 44,
+      "k": 40,
+      "ph": 7.0,
+      "temperature": 30.0,
+      "humidity": 70,
+      "rainfall": 95
+    },
+    "Erode": {
+      "n": 72,
+      "p": 38,
+      "k": 36,
+      "ph": 6.6,
+      "temperature": 28.0,
+      "humidity": 62,
+      "rainfall": 82
+    },
+    "Tirunelveli": {
+      "n": 68,
+      "p": 35,
+      "k": 34,
+      "ph": 6.8,
+      "temperature": 29.5,
+      "humidity": 72,
+      "rainfall": 105
+    },
+    "Dindigul": {
+      "n": 62,
+      "p": 34,
+      "k": 30,
+      "ph": 6.4,
+      "temperature": 28.0,
+      "humidity": 65,
+      "rainfall": 88
+    }
+  },
+  "Telangana": {
+    "Warangal": {
+      "n": 72,
+      "p": 48,
+      "k": 42,
+      "ph": 6.8,
+      "temperature": 28.5,
+      "humidity": 62,
+      "rainfall": 92
+    },
+    "Karimnagar": {
+      "n": 68,
+      "p": 45,
+      "k": 40,
+      "ph": 7.0,
+      "temperature": 29.0,
+      "humidity": 58,
+      "rainfall": 85
+    },
+    "Nalgonda": {
+      "n": 65,
+      "p": 42,
+      "k": 38,
+      "ph": 7.2,
+      "temperature": 29.5,
+      "humidity": 55,
+      "rainfall": 78
+    },
+    "Nizamabad": {
+      "n": 75,
+      "p": 50,
+      "k": 45,
+      "ph": 6.8,
+      "temperature": 28.0,
+      "humidity": 65,
+      "rainfall": 100
+    },
+    "Khammam": {
+      "n": 82,
+      "p": 52,
+      "k": 48,
+      "ph": 6.5,
+      "temperature": 28.5,
+      "humidity": 72,
+      "rainfall": 115
+    },
+    "Mahabubnagar": {
+      "n": 58,
+      "p": 40,
+      "k": 35,
+      "ph": 7.5,
+      "temperature": 30.0,
+      "humidity": 52,
+      "rainfall": 65
+    },
+    "Rangareddy": {
+      "n": 70,
+      "p": 46,
+      "k": 42,
+      "ph": 7.0,
+      "temperature": 28.5,
+      "humidity": 60,
+      "rainfall": 85
+    },
+    "Suryapet": {
+      "n": 62,
+      "p": 43,
+      "k": 38,
+      "ph": 7.2,
+      "temperature": 29.5,
+      "humidity": 58,
+      "rainfall": 78
+    }
+  },
+  "Uttar Pradesh": {
+    "Varanasi": {
+      "n": 95,
+      "p": 35,
+      "k": 48,
+      "ph": 7.0,
+      "temperature": 27.0,
+      "humidity": 72,
+      "rainfall": 98
+    },
+    "Lucknow": {
+      "n": 88,
+      "p": 38,
+      "k": 45,
+      "ph": 7.2,
+      "temperature": 26.5,
+      "humidity": 68,
+      "rainfall": 90
+    },
+    "Kanpur": {
+      "n": 82,
+      "p": 35,
+      "k": 42,
+      "ph": 7.4,
+      "temperature": 27.5,
+      "humidity": 62,
+      "rainfall": 78
+    },
+    "Meerut": {
+      "n": 100,
+      "p": 45,
+      "k": 52,
+      "ph": 7.0,
+      "temperature": 24.5,
+      "humidity": 70,
+      "rainfall": 82
+    },
+    "Prayagraj": {
+      "n": 90,
+      "p": 40,
+      "k": 48,
+      "ph": 7.2,
+      "temperature": 27.0,
+      "humidity": 65,
+      "rainfall": 88
+    },
+    "Bareilly": {
+      "n": 95,
+      "p": 42,
+      "k": 50,
+      "ph": 6.8,
+      "temperature": 25.0,
+      "humidity": 72,
+      "rainfall": 95
+    },
+    "Agra": {
+      "n": 75,
+      "p": 32,
+      "k": 40,
+      "ph": 7.6,
+      "temperature": 28.0,
+      "humidity": 55,
+      "rainfall": 62
+    },
+    "Gorakhpur": {
+      "n": 105,
+      "p": 48,
+      "k": 55,
+      "ph": 6.5,
+      "temperature": 26.0,
+      "humidity": 78,
+      "rainfall": 115
+    },
+    "Aligarh": {
+      "n": 80,
+      "p": 34,
+      "k": 42,
+      "ph": 7.5,
+      "temperature": 27.0,
+      "humidity": 60,
+      "rainfall": 72
+    },
+    "Moradabad": {
+      "n": 92,
+      "p": 40,
+      "k": 48,
+      "ph": 7.0,
+      "temperature": 25.5,
+      "humidity": 68,
+      "rainfall": 88
+    }
+  },
+  "Uttarakhand": {
+    "Dehradun": {
+      "n": 40,
+      "p": 72,
+      "k": 120,
+      "ph": 6.2,
+      "temperature": 22.5,
+      "humidity": 72,
+      "rainfall": 115
+    },
+    "Haridwar": {
+      "n": 48,
+      "p": 68,
+      "k": 110,
+      "ph": 6.5,
+      "temperature": 24.0,
+      "humidity": 68,
+      "rainfall": 100
+    },
+    "Nainital": {
+      "n": 30,
+      "p": 85,
+      "k": 145,
+      "ph": 5.8,
+      "temperature": 18.5,
+      "humidity": 78,
+      "rainfall": 135
+    },
+    "Udham Singh Nagar": {
+      "n": 52,
+      "p": 65,
+      "k": 105,
+      "ph": 6.8,
+      "temperature": 25.0,
+      "humidity": 65,
+      "rainfall": 92
+    },
+    "Tehri Garhwal": {
+      "n": 25,
+      "p": 90,
+      "k": 155,
+      "ph": 5.6,
+      "temperature": 17.0,
+      "humidity": 82,
+      "rainfall": 145
+    },
+    "Pauri Garhwal": {
+      "n": 28,
+      "p": 88,
+      "k": 150,
+      "ph": 5.7,
+      "temperature": 18.0,
+      "humidity": 80,
+      "rainfall": 140
+    }
+  },
+  "West Bengal": {
+    "Purba Bardhaman": {
+      "n": 92,
+      "p": 42,
+      "k": 40,
+      "ph": 6.2,
+      "temperature": 27.0,
+      "humidity": 80,
+      "rainfall": 175
+    },
+    "Hooghly": {
+      "n": 88,
+      "p": 40,
+      "k": 38,
+      "ph": 6.4,
+      "temperature": 27.5,
+      "humidity": 78,
+      "rainfall": 168
+    },
+    "Murshidabad": {
+      "n": 95,
+      "p": 45,
+      "k": 42,
+      "ph": 6.0,
+      "temperature": 27.8,
+      "humidity": 82,
+      "rainfall": 180
+    },
+    "Nadia": {
+      "n": 90,
+      "p": 43,
+      "k": 40,
+      "ph": 6.3,
+      "temperature": 27.2,
+      "humidity": 80,
+      "rainfall": 172
+    },
+    "North 24 Parganas": {
+      "n": 85,
+      "p": 38,
+      "k": 36,
+      "ph": 6.5,
+      "temperature": 28.0,
+      "humidity": 85,
+      "rainfall": 195
+    },
+    "South 24 Parganas": {
+      "n": 82,
+      "p": 36,
+      "k": 35,
+      "ph": 6.0,
+      "temperature": 28.5,
+      "humidity": 88,
+      "rainfall": 210
+    },
+    "Bankura": {
+      "n": 78,
+      "p": 35,
+      "k": 34,
+      "ph": 5.8,
+      "temperature": 28.0,
+      "humidity": 75,
+      "rainfall": 155
+    }
+  }
+}
