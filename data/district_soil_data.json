@@ -1393,5 +1393,25 @@
       "humidity": 75,
       "rainfall": 155
     }
+  },
+  "Punjab": {
+    "Ludhiana": {"n": 78, "p": 50, "k": 22, "ph": 7.2, "temperature": 22.5, "humidity": 65, "rainfall": 90},
+    "Amritsar": {"n": 82, "p": 48, "k": 20, "ph": 7.0, "temperature": 23.0, "humidity": 67, "rainfall": 88},
+    "Jalandhar": {"n": 75, "p": 46, "k": 21, "ph": 7.1, "temperature": 22.8, "humidity": 66, "rainfall": 85},
+    "Patiala": {"n": 80, "p": 50, "k": 23, "ph": 7.3, "temperature": 23.5, "humidity": 64, "rainfall": 82},
+    "Bathinda": {"n": 68, "p": 38, "k": 19, "ph": 7.5, "temperature": 24.0, "humidity": 58, "rainfall": 70},
+    "Firozpur": {"n": 74, "p": 44, "k": 20, "ph": 7.2, "temperature": 24.5, "humidity": 62, "rainfall": 80},
+    "Sangrur": {"n": 76, "p": 47, "k": 21, "ph": 7.1, "temperature": 23.0, "humidity": 65, "rainfall": 85},
+    "Hoshiarpur": {"n": 65, "p": 40, "k": 25, "ph": 6.8, "temperature": 21.5, "humidity": 70, "rainfall": 95}
+  },
+  "Haryana": {
+    "Karnal": {"n": 80, "p": 48, "k": 22, "ph": 7.3, "temperature": 24.0, "humidity": 60, "rainfall": 85},
+    "Hisar": {"n": 65, "p": 32, "k": 18, "ph": 7.8, "temperature": 25.0, "humidity": 50, "rainfall": 62},
+    "Ambala": {"n": 78, "p": 45, "k": 23, "ph": 7.1, "temperature": 23.5, "humidity": 65, "rainfall": 90},
+    "Sirsa": {"n": 62, "p": 30, "k": 17, "ph": 7.9, "temperature": 25.5, "humidity": 48, "rainfall": 58},
+    "Kurukshetra": {"n": 82, "p": 50, "k": 24, "ph": 7.2, "temperature": 23.8, "humidity": 63, "rainfall": 88},
+    "Rohtak": {"n": 75, "p": 42, "k": 20, "ph": 7.4, "temperature": 24.5, "humidity": 58, "rainfall": 75},
+    "Sonipat": {"n": 78, "p": 44, "k": 21, "ph": 7.3, "temperature": 24.0, "humidity": 62, "rainfall": 78},
+    "Fatehabad": {"n": 65, "p": 35, "k": 18, "ph": 7.7, "temperature": 25.0, "humidity": 52, "rainfall": 65}
   }
-}
+}

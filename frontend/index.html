@@ -53,11 +53,21 @@
           <input class="lf-input" id="loginPass" type="password" placeholder="Enter password"/>
         </div>
       </div>
+      <div class="lf-group" id="regNameGroup" style="display:none;">
+        <label class="lf-label" for="loginName">Full Name</label>
+        <div class="lf-input-wrap">
+          <svg class="lf-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+          <input class="lf-input" id="loginName" type="text" placeholder="Enter full name" autocomplete="off"/>
+        </div>
+      </div>
       <div class="lf-error hidden" id="loginError"></div>
       <button class="lf-btn" id="loginBtn" type="button">
         <span id="loginBtnText">Access Platform</span>
         <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
       </button>
+      <div class="lf-toggle" id="toggleRegGroup" style="text-align: center; margin-top: 15px;">
+        <span id="toggleRegText" style="color: #6b7280; font-size: 0.9rem; cursor: pointer;">Don't have an account? <span style="color: #16a34a; font-weight: bold;">Create one</span></span>
+      </div>
       <div class="lf-demo">
         <span class="lf-demo__label">Demo credentials:</span>
         <code class="demo-chip" id="demoFarmerChip">farmer / farmer123</code>
@@ -95,6 +105,13 @@
 
     <!-- HERO SECTION: Globe + Weather + Selection -->
     <section class="geo-hero">
+      <!-- Farm background slideshow (behind everything) -->
+      <div class="geo-hero__farm-bg" id="farmBgContainer">
+        <div class="geo-hero__farm-slide active"></div>
+        <div class="geo-hero__farm-slide"></div>
+        <div class="geo-hero__farm-slide"></div>
+        <div class="geo-hero__farm-slide"></div>
+      </div>
       <div class="geo-hero__overlay"></div>
 
       <!-- LEFT: Region/State/District + Farming Details -->
@@ -261,7 +278,7 @@
     </div>
 
     <!-- RESULTS SECTION -->
-    <section class="results" id="resultsSection" style="display:none">
+    <section class="results" id="resultsSection" style="display:none;">
 
       <!-- VERIFICATION BANNER -->
       <div class="verify-banner" id="verifyBanner"></div>
@@ -307,7 +324,7 @@
           <div class="rp-header">
             <div class="rp-icon">🧬</div>
             <div>
-              <div class="rp-title" id="whyTitle">WHY THIS CROP?</div>
+              <div class="rp-title">WHY THIS CROP?</div>
               <div class="rp-sub">7-parameter field fingerprint analysis</div>
             </div>
           </div>
@@ -350,6 +367,14 @@
         </div>
       </div>
 
+      <!-- GROK AI INSIGHTS -->
+      <div class="grok-panel" id="grokInsights" style="display:none">
+        <div class="grok-header">
+          <span class="grok-badge">🤖 Grok AI Agricultural Analysis</span>
+        </div>
+        <div class="grok-content">Waiting for prediction…</div>
+      </div>
+
       <!-- TECH PANEL -->
       <div class="tech-panel">
         <button class="tech-toggle" id="techToggle" aria-expanded="false">
@@ -379,10 +404,12 @@
                 <li><strong>Pipeline:</strong> <code>StandardScaler → LogisticRegression</code></li>
                 <li><strong>Dataset:</strong> 2,200 samples × 22 balanced crops (100 each)</li>
                 <li><strong>Split:</strong> 80% Train (1,760) / 20% Test (440)</li>
+                <li><strong>Grok AI:</strong> Live agricultural insights via <code>xAI Grok API</code></li>
                 <li><strong>Layer Architecture:</strong><br>
                   Layer 1: Geographic Intelligence (Region/State/District)<br>
                   Layer 2: Live Climate (Open-Meteo API, display only)<br>
-                  Layer 3: ML Model (7-feature soil/climate profile from dataset)
+                  Layer 3: ML Model (7-feature soil/climate profile from dataset)<br>
+                  Layer 4: Grok AI Insights (xAI API, contextual analysis)
                 </li>
               </ul>
             </div>

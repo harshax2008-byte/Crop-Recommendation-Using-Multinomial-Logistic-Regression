@@ -58,7 +58,11 @@ CROP_METADATA = {
     "coconut": {"emoji": "🥥", "scientific": "Cocos nucifera", "category": "Plantation Palm", "water": "High (150-250mm)", "season": "Coastal / Perennial", "soil": "Coastal Sandy / Alluvial", "desc": "Thrives in humid tropical coastal zones with plenty of sunshine and saline tolerance."},
     "cotton": {"emoji": "🧶", "scientific": "Gossypium hirsutum", "category": "Commercial Fiber", "water": "Moderate (60-100mm)", "season": "Kharif (Monsoon)", "soil": "Black Cotton Soil (Regur)", "desc": "Important cash crop requiring high nitrogen, warm climate, and deep clayey soils."},
     "jute": {"emoji": "🧵", "scientific": "Corchorus olitorius", "category": "Commercial Bast Fiber", "water": "High (150-200mm)", "season": "Kharif (Monsoon)", "soil": "Alluvial Floodplain Soil", "desc": "Golden fiber crop requiring warm, humid weather and standing water tolerance."},
-    "coffee": {"emoji": "☕", "scientific": "Coffea arabica", "category": "Plantation Beverage", "water": "High (150-200mm)", "season": "Perennial (Hill Slopes)", "soil": "Humus-rich Volcanic Loam", "desc": "Shade-loving hill slope crop requiring well-distributed rainfall and cool nights."}
+    "coffee": {"emoji": "☕", "scientific": "Coffea arabica", "category": "Plantation Beverage", "water": "High (150-200mm)", "season": "Perennial (Hill Slopes)", "soil": "Humus-rich Volcanic Loam", "desc": "Shade-loving hill slope crop requiring well-distributed rainfall and cool nights."},
+    "tomato": {"emoji": "🍅", "scientific": "Solanum lycopersicum", "category": "Vegetable", "water": "Moderate", "season": "Year-round", "soil": "Well-drained Loamy Soil", "desc": "Warm-season vegetable requiring full sun and well-distributed watering."},
+    "potato": {"emoji": "🥔", "scientific": "Solanum tuberosum", "category": "Root Vegetable", "water": "Moderate", "season": "Rabi (Winter)", "soil": "Sandy Loam", "desc": "Cool-season root crop that thrives in loose, well-drained soils."},
+    "onion": {"emoji": "🧅", "scientific": "Allium cepa", "category": "Bulb Vegetable", "water": "Low to Moderate", "season": "Rabi / Kharif", "soil": "Rich Sandy Loam", "desc": "Shallow-rooted bulb crop requiring dry weather during bulb maturation."},
+    "carrot": {"emoji": "🥕", "scientific": "Daucus carota", "category": "Root Vegetable", "water": "Moderate", "season": "Rabi (Winter)", "soil": "Deep Sandy Loam", "desc": "Cool-season crop needing deep, loose soil for optimal root development."}
 }
 
 _pipeline_cache = None

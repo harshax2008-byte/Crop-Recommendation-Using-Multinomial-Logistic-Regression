@@ -3,7 +3,7 @@ Crop Recommendation System - Preprocessing & Pipeline Module
 Author: College ML Project
 Description: Handles feature/target separation, train-test splitting,
              and scikit-learn Pipeline construction combining feature
-             scaling (StandardScaler) with Multinomial Logistic Regression.
+             scaling (StandardScaler) with Random Forest + Logistic Regression ensemble.
 """
 
 from typing import Tuple
@@ -11,7 +11,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, VotingClassifier
 from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import LabelEncoder
 
 FEATURE_COLUMNS = ["N", "P", "K", "temperature", "humidity", "ph", "rainfall"]
 TARGET_COLUMN = "label"
@@ -54,42 +56,63 @@ def split_data(
     return X_train, X_test, y_train, y_test
 
 
-def build_pipeline(random_state: int = 42, max_iter: int = 1000) -> Pipeline:
+def build_pipeline(random_state: int = 42, max_iter: int = 2000) -> Pipeline:
     """
     Builds a robust, production-safe scikit-learn Pipeline.
 
     Architecture:
       Step 1: StandardScaler
               Z-score normalization: z = (x - mean) / std.
-              Crucial for Logistic Regression because features like Rainfall (0-300mm)
-              and pH (3-10) have vastly different scales. Without scaling, larger
-              magnitude features disproportionately dominate the gradient optimization.
 
-      Step 2: LogisticRegression(multi_class='multinomial', solver='lbfgs')
-              Configured specifically for MULTINOMIAL multiclass classification.
-              Applies the Softmax function directly across all 22 crop classes,
-              producing valid, well-calibrated class probabilities that sum to 1.
+      Step 2: VotingClassifier (Soft Voting Ensemble)
+              - RandomForestClassifier: 300 trees, robust feature-based model
+              - Multinomial LogisticRegression: lbfgs solver, Softmax probabilities
+              - GradientBoostingClassifier: boosted ensemble for edge cases
+              Soft voting averages the class probabilities, producing confident
+              and well-calibrated predictions across all 22+ crop classes.
     """
-    # In modern scikit-learn (>=1.8), solver='lbfgs' inherently optimizes multinomial loss.
-    # We maintain backward compatibility for older scikit-learn versions where multi_class was an explicit argument.
-    import inspect
-    clf_kwargs = {
-        "solver": "lbfgs",
-        "max_iter": max_iter,
-        "random_state": random_state
-    }
-    if "multi_class" in inspect.signature(LogisticRegression.__init__).parameters:
-        clf_kwargs["multi_class"] = "multinomial"
+    # Build sub-classifiers for ensemble
+    rf = RandomForestClassifier(
+        n_estimators=300,
+        max_depth=None,
+        min_samples_split=2,
+        min_samples_leaf=1,
+        max_features="sqrt",
+        class_weight="balanced",
+        random_state=random_state,
+        n_jobs=-1
+    )
+
+    lr = LogisticRegression(
+        solver="lbfgs",
+        max_iter=max_iter,
+        C=10.0,
+        class_weight="balanced",
+        random_state=random_state
+    )
+
+    gb = GradientBoostingClassifier(
+        n_estimators=150,
+        learning_rate=0.1,
+        max_depth=5,
+        subsample=0.8,
+        random_state=random_state
+    )
+
+    # Voting ensemble with soft probability averaging
+    ensemble = VotingClassifier(
+        estimators=[
+            ("rf", rf),
+            ("lr", lr),
+            ("gb", gb),
+        ],
+        voting="soft",
+        weights=[3, 1, 2]  # Weight RF highest, then GB, then LR
+    )
 
     pipeline = Pipeline([
-        (
-            "scaler",
-            StandardScaler()
-        ),
-        (
-            "classifier",
-            LogisticRegression(**clf_kwargs)
-        )
+        ("scaler", StandardScaler()),
+        ("classifier", ensemble)
     ])
     return pipeline
 

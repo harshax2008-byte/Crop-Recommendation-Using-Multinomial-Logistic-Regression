@@ -132,6 +132,10 @@ CROP_DATASET_PROFILES: Dict[str, Dict[str, Any]] = {
     "cotton":      {"N": (105,135),"P": (40,50),  "K": (15,25),  "temperature": (22,32), "humidity": (70,88), "ph": (6.0,7.5), "rainfall": (70,115)},
     "jute":        {"N": (60,90),  "P": (45,60),  "K": (40,55),  "temperature": (24,30), "humidity": (70,90), "ph": (6.0,8.0), "rainfall": (155,250)},
     "coffee":      {"N": (95,115), "P": (25,35),  "K": (28,40),  "temperature": (24,30), "humidity": (55,70), "ph": (6.0,7.5), "rainfall": (140,180)},
+    "tomato":      {"N": (100,120),"P": (40,60),  "K": (40,60),  "temperature": (20,27), "humidity": (60,80), "ph": (6.0,7.0), "rainfall": (60,100)},
+    "potato":      {"N": (120,150),"P": (40,60),  "K": (80,120), "temperature": (15,20), "humidity": (70,90), "ph": (5.0,6.5), "rainfall": (50,100)},
+    "onion":       {"N": (100,120),"P": (40,60),  "K": (80,100), "temperature": (13,24), "humidity": (60,75), "ph": (6.0,7.5), "rainfall": (30,75)},
+    "carrot":      {"N": (60,80),  "P": (40,60),  "K": (80,100), "temperature": (15,20), "humidity": (60,80), "ph": (5.5,7.0), "rainfall": (50,100)}
 }
 
 # -------------------------------------------------------------------------
@@ -336,6 +340,42 @@ CROP_ECONOMICS: Dict[str, Dict[str, Any]] = {
         "avg_yield_quintal_acre": 6.5,
         "maturity_days": "Perennial (3 yrs first crop)",
         "key_states": ["Karnataka", "Kerala", "Tamil Nadu", "Andhra Pradesh", "Odisha"]
+    },
+    "tomato": {
+        "seed_rate_per_acre": 0.1,        # kg/acre (hybrid)
+        "seed_price_per_kg": 35000.0,     # INR/kg
+        "fertilizer_per_acre": 12000.0,
+        "cultivation_per_acre": 15000.0,
+        "avg_yield_quintal_acre": 180.0,
+        "maturity_days": "80 - 100 days",
+        "key_states": ["Andhra Pradesh", "Madhya Pradesh", "Karnataka", "Gujarat", "Odisha"]
+    },
+    "potato": {
+        "seed_rate_per_acre": 1200.0,     # kg/acre (tubers)
+        "seed_price_per_kg": 35.0,
+        "fertilizer_per_acre": 14000.0,
+        "cultivation_per_acre": 18000.0,
+        "avg_yield_quintal_acre": 110.0,
+        "maturity_days": "90 - 110 days",
+        "key_states": ["Uttar Pradesh", "West Bengal", "Bihar", "Gujarat", "Madhya Pradesh"]
+    },
+    "onion": {
+        "seed_rate_per_acre": 4.0,        # kg/acre
+        "seed_price_per_kg": 2500.0,
+        "fertilizer_per_acre": 10000.0,
+        "cultivation_per_acre": 15000.0,
+        "avg_yield_quintal_acre": 90.0,
+        "maturity_days": "110 - 140 days",
+        "key_states": ["Maharashtra", "Madhya Pradesh", "Karnataka", "Gujarat", "Bihar"]
+    },
+    "carrot": {
+        "seed_rate_per_acre": 2.5,        # kg/acre
+        "seed_price_per_kg": 800.0,
+        "fertilizer_per_acre": 6000.0,
+        "cultivation_per_acre": 10000.0,
+        "avg_yield_quintal_acre": 80.0,
+        "maturity_days": "90 - 110 days",
+        "key_states": ["Haryana", "Punjab", "Uttar Pradesh", "Karnataka", "Tamil Nadu"]
     }
 }
 
@@ -409,7 +449,8 @@ def calculate_farm_economics(
         "lentil": 6000, "pomegranate": 15000, "banana": 2000, "mango": 8000,
         "grapes": 10000, "watermelon": 1500, "muskmelon": 2500, "apple": 18000,
         "orange": 4500, "papaya": 1800, "coconut": 2800, "cotton": 6620,
-        "jute": 4500, "coffee": 18000
+        "jute": 4500, "coffee": 18000,
+        "tomato": 1500, "potato": 1200, "onion": 1800, "carrot": 2000
     }
     price_per_quintal = APPROX_PRICE_PER_QUINTAL.get(crop_key, 3000)
     if is_organic:

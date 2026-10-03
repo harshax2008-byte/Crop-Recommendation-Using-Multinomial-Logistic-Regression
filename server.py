@@ -12,7 +12,11 @@ import uuid
 import time
 import threading
 from pathlib import Path
-from typing import Optional, Dict
+from typing import Optional, Dict, List
+
+GROK_API_KEY = os.environ.get("GROK_API_KEY", "")
+GROK_API_URL = "https://api.x.ai/v1/chat/completions"
+GROK_MODEL   = "grok-2-1212"
 
 if hasattr(sys.stdout, "reconfigure"):
     try:
@@ -125,6 +129,23 @@ class SoilUpdateRequest(BaseModel):
     humidity: float = Field(..., ge=5, le=100)
     rainfall: float = Field(..., ge=10, le=350)
 
+class GrokInsightsRequest(BaseModel):
+    crop: str
+    confidence: float
+    state: str
+    district: str
+    n: float
+    p: float
+    k: float
+    ph: float
+    temperature: float
+    humidity: float
+    rainfall: float
+    farm_acres: float = 2.5
+    farming_method: str = "regular"
+    top_alternatives: List[str] = []
+    economics: dict = {}
+
 
 @app.post("/api/login")
 def login(req: LoginRequest):
@@ -133,6 +154,22 @@ def login(req: LoginRequest):
         raise HTTPException(status_code=401, detail="Invalid username or password")
     token = create_token(req.username, user["role"], user["name"])
     return JSONResponse({"token": token, "role": user["role"], "name": user["name"], "username": req.username})
+
+class RegisterRequest(BaseModel):
+    username: str
+    password: str
+    name: str
+
+@app.post("/api/register")
+def register(req: RegisterRequest):
+    if req.username in USERS:
+        raise HTTPException(status_code=400, detail="Username already exists")
+    USERS[req.username] = {
+        "password": req.password,
+        "role": "farmer",
+        "name": req.name
+    }
+    return JSONResponse({"status": "ok", "message": "Account created successfully. You can now log in."})
 
 @app.post("/api/logout")
 def logout(authorization: str = Header(default="")):
@@ -145,12 +182,35 @@ def get_soil_data(state: str, district: str):
     data = load_soil_data()
     district_data = data.get(state, {}).get(district)
     if not district_data:
+        # State-based realistic soil defaults (not flat 50,50,50)
+        STATE_SOIL_DEFAULTS = {
+            "Punjab":            {"n": 80, "p": 60, "k": 20, "ph": 6.5, "temperature": 25.0, "humidity": 65, "rainfall": 100}, # Maize
+            "Haryana":           {"n": 80, "p": 60, "k": 20, "ph": 6.5, "temperature": 25.0, "humidity": 65, "rainfall": 100}, # Maize
+            "Uttar Pradesh":     {"n": 20, "p": 65, "k": 20, "ph": 6.5, "temperature": 20.0, "humidity": 60, "rainfall": 45},  # Lentil
+            "Bihar":             {"n": 20, "p": 65, "k": 20, "ph": 6.5, "temperature": 30.0, "humidity": 85, "rainfall": 60},  # Mungbean
+            "West Bengal":       {"n": 80, "p": 50, "k": 50, "ph": 7.0, "temperature": 27.0, "humidity": 80, "rainfall": 200}, # Jute
+            "Assam":             {"n": 90, "p": 50, "k": 40, "ph": 6.5, "temperature": 25.0, "humidity": 85, "rainfall": 200}, # Rice
+            "Odisha":            {"n": 90, "p": 50, "k": 40, "ph": 6.5, "temperature": 25.0, "humidity": 85, "rainfall": 200}, # Rice
+            "Andhra Pradesh":    {"n": 120, "p": 45, "k": 20, "ph": 6.5, "temperature": 28.0, "humidity": 80, "rainfall": 90}, # Cotton
+            "Telangana":         {"n": 20, "p": 70, "k": 20, "ph": 6.5, "temperature": 30.0, "humidity": 50, "rainfall": 140}, # Pigeonpeas
+            "Tamil Nadu":        {"n": 100, "p": 70, "k": 50, "ph": 6.5, "temperature": 28.0, "humidity": 85, "rainfall": 130},# Banana
+            "Karnataka":         {"n": 105, "p": 30, "k": 35, "ph": 6.5, "temperature": 27.0, "humidity": 65, "rainfall": 160},# Coffee
+            "Kerala":            {"n": 20, "p": 20, "k": 35, "ph": 6.5, "temperature": 30.0, "humidity": 90, "rainfall": 160}, # Coconut
+            "Maharashtra":       {"n": 20, "p": 20, "k": 35, "ph": 6.5, "temperature": 20.0, "humidity": 85, "rainfall": 70},  # Grapes
+            "Gujarat":           {"n": 120, "p": 45, "k": 20, "ph": 6.5, "temperature": 28.0, "humidity": 80, "rainfall": 90}, # Cotton
+            "Rajasthan":         {"n": 20, "p": 40, "k": 30, "ph": 6.5, "temperature": 30.0, "humidity": 50, "rainfall": 45},  # Mothbeans
+            "Madhya Pradesh":    {"n": 40, "p": 65, "k": 20, "ph": 6.5, "temperature": 30.0, "humidity": 75, "rainfall": 85},  # Blackgram
+            "Himachal Pradesh":  {"n": 15, "p": 130, "k": 200, "ph": 6.0, "temperature": 22.0, "humidity": 90, "rainfall": 110},# Apple
+            "Uttarakhand":       {"n": 20, "p": 65, "k": 20, "ph": 6.5, "temperature": 20.0, "humidity": 20, "rainfall": 100}, # Kidneybeans
+        }
+        defaults = STATE_SOIL_DEFAULTS.get(state, {"n": 50, "p": 50, "k": 50, "ph": 6.5, "temperature": 25.0, "humidity": 70, "rainfall": 100})
         return JSONResponse({
             "found": False,
-            "data": {"n": 50, "p": 50, "k": 50, "ph": 6.5, "temperature": 25, "humidity": 70, "rainfall": 100},
-            "message": f"No specific data for {district}, {state}."
+            "data": defaults,
+            "message": f"Using regional profile for {state}."
         })
     return JSONResponse({"found": True, "data": district_data, "message": f"Soil data for {district}, {state}"})
+
 
 @app.put("/api/soil-data")
 def update_soil_data(req: SoilUpdateRequest, authorization: str = Header(default="")):
@@ -365,6 +425,104 @@ def retrain_model(authorization: str = Header(default="")):
         return JSONResponse({"status": "ok", "message": "Model retrained successfully", "accuracy": metrics.get("accuracy"), "f1_score_weighted": metrics.get("f1_score_weighted"), "train_samples": metrics.get("train_samples"), "test_samples": metrics.get("test_samples")})
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Retraining failed: {str(exc)}")
+
+
+
+@app.post("/api/grok-insights")
+def grok_insights(req: GrokInsightsRequest, authorization: str = Header(default="")):
+    """Generate AI-powered crop insights using xAI Grok API."""
+    import urllib.request as urllib_req
+
+    if not GROK_API_KEY:
+        raise HTTPException(
+            status_code=503,
+            detail="GROK_API_KEY not configured. Set this environment variable to enable Grok AI insights."
+        )
+
+    alt_str = ", ".join(req.top_alternatives) if req.top_alternatives else "None"
+    eco = req.economics
+    investment = eco.get("total_estimated_investment", 0)
+    revenue    = eco.get("estimated_revenue", 0)
+    profit     = revenue - investment if revenue else None
+
+    farming_label = "Organic" if req.farming_method == "organic" else "Regular/Conventional"
+
+    prompt = f"""You are an expert agricultural advisor specializing in Indian farming. 
+Provide a concise, actionable agricultural insight report for the following prediction:
+
+**ML Model Recommendation:**
+- Recommended Crop: {req.crop} (Confidence: {req.confidence:.1f}%)
+- Location: {req.district}, {req.state}, India
+- Farm Size: {req.farm_acres} acres
+- Farming Method: {farming_label}
+- Alternative Crops: {alt_str}
+
+**Soil & Climate Profile:**
+- Nitrogen (N): {req.n} kg/ha
+- Phosphorus (P): {req.p} kg/ha  
+- Potassium (K): {req.k} kg/ha
+- pH: {req.ph}
+- Temperature: {req.temperature}°C
+- Humidity: {req.humidity}%
+- Rainfall: {req.rainfall} mm
+
+**Economics:**
+- Total Investment: ₹{investment:,.0f}
+- Estimated Revenue: ₹{revenue:,.0f}
+- Net Profit: ₹{profit:,.0f if profit is not None else 'N/A'}
+
+Please provide:
+1. **Why {req.crop} is ideal** for this exact soil-climate profile (2-3 sentences)
+2. **Key agronomic tips** for {req.state} (3-4 actionable bullet points)
+3. **Risk factors** to watch for (2-3 bullet points)
+4. **Market & timing advice** for {req.state} (1-2 sentences)
+
+Keep the response concise and practical for an Indian farmer. Use simple language."""
+
+    payload = {
+        "model": GROK_MODEL,
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are AgroSense AI's agricultural expert. Provide precise, actionable farming advice for Indian farmers based on ML model predictions. Be concise and practical."
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        "max_tokens": 600,
+        "temperature": 0.7,
+    }
+
+    try:
+        body = json.dumps(payload).encode("utf-8")
+        request = urllib_req.Request(
+            GROK_API_URL,
+            data=body,
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {GROK_API_KEY}",
+                "User-Agent": "AgroSenseAI/5.0",
+            },
+            method="POST"
+        )
+        with urllib_req.urlopen(request, timeout=20) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+
+        insights = result["choices"][0]["message"]["content"]
+        model_used = result.get("model", GROK_MODEL)
+        return JSONResponse({
+            "insights": insights,
+            "model": model_used,
+            "tokens_used": result.get("usage", {}).get("total_tokens", 0)
+        })
+
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        raise HTTPException(status_code=502, detail=f"Grok API error {e.code}: {body[:200]}")
+    except Exception as exc:
+        raise HTTPException(status_code=502, detail=f"Grok API request failed: {str(exc)}")
 
 
 app.mount("/static", StaticFiles(directory=str(FRONTEND_DIR)), name="static")

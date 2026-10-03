@@ -1,23 +1,39 @@
 {
   "version": 2,
+  "name": "crop-ml-platform",
   "builds": [
     {
       "src": "server.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    },
+    {
+      "src": "frontend/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/server.py"
-    },
     {
       "src": "/static/(.*)",
       "dest": "/frontend/$1"
     },
     {
+      "src": "/api/(.*)",
+      "dest": "/server.py"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/server.py"
+    },
+    {
       "src": "/",
-      "dest": "/frontend/index.html"
+      "dest": "/server.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server.py"
     }
   ]
 }
